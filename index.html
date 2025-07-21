@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>جبل السودة - AR تجربة</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs>
+      <!-- الماركر: يمكنك استخدام صورة marker مخصصة لاحقًا -->
+      <a-marker preset="hiro">
+        <!-- تمثيل رمزي لجبل السودة -->
+        <a-cone
+          position="0 0.5 0"
+          radius-bottom="0.7"
+          radius-top="0.1"
+          height="1.5"
+          color="#2f4f4f"
+        ></a-cone>
+
+        <!-- نص يوضح اسم الجبل -->
+        <a-text
+          value="جبل السودة"
+          align="center"
+          position="0 -0.7 0"
+          color="#ffffff"
+        ></a-text>
+      </a-marker>
+
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
